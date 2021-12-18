@@ -4,4 +4,8 @@ tasks:
 
 ports:
   - port: 3000 
-    onOpen: open-browser   
+    onOpen: open-browser  
+
+vscode:
+  extensions:
+    - svelte.svelte-vscode
