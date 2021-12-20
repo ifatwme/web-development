@@ -18,3 +18,4 @@ github:
 vscode:
   extensions:
     - svelte.svelte-vscode
+    - antfu.vite
