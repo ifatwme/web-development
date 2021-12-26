@@ -1,8 +1,7 @@
-
 <script lang="ts" context="module">
-    import type { load } from "@sveltejs/kit";
+    import type { Load } from "@sveltejs/kit";
 
-    export const load: load = async ({ fetch }) => {
+    export const load: Load = async ({ fetch }) => {
         const res = await fetch("/todos.json");
 
         if (res.ok) {
@@ -24,7 +23,7 @@
 
     export let todos: Todo[];
 
-    const title = "ToDo";
+    const title = "Todo";
 </script>
 
 <style>

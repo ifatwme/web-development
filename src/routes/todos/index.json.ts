@@ -1,7 +1,7 @@
-import type { requesthandler } from "@sveltejs/kit";
+import type { RequestHandler } from "@sveltejs/kit";
 
 // TODO: Persist in database
-let todos: todo[] = [];
+let todos: Todo[] = [];
 
 export const get: RequestHandler = () => {
     return {
@@ -10,7 +10,7 @@ export const get: RequestHandler = () => {
     }
 }
 
-export const post: RequestHandler<{}, FormData> = () => {
+export const post: RequestHandler<{}, FormData> = (request) => {
     todos.push({
         created_at: new Date(),
         text: request.body.get("text"),
